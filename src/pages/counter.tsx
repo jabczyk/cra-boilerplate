@@ -6,6 +6,7 @@ import {
   increment,
   reset
 } from '../store/counter/counter.slice'
+import { FormattedMessage } from 'react-intl'
 
 const Counter: React.FC = () => {
   const dispatch = useDispatch()
@@ -13,11 +14,28 @@ const Counter: React.FC = () => {
 
   return (
     <div>
-      {JSON.stringify(counter)}
+      <h1>
+        <FormattedMessage
+          id="counter.value"
+          values={{ value: counter.value }}
+        />
+      </h1>
+      <h2>
+        <FormattedMessage
+          id="counter.change-count"
+          values={{ count: counter.changeCount }}
+        />
+      </h2>
 
-      <button onClick={() => dispatch(increment())}>Increment</button>
-      <button onClick={() => dispatch(decrement())}>Decrement</button>
-      <button onClick={() => dispatch(reset())}>Reset</button>
+      <button onClick={() => dispatch(increment())}>
+        <FormattedMessage id="counter.increment" />
+      </button>
+      <button onClick={() => dispatch(decrement())}>
+        <FormattedMessage id="counter.decrement" />
+      </button>
+      <button onClick={() => dispatch(reset())}>
+        <FormattedMessage id="counter.reset" />
+      </button>
     </div>
   )
 }
