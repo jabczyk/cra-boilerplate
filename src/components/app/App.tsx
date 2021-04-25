@@ -1,10 +1,16 @@
 import React from 'react'
+import { FormattedMessage } from 'react-intl'
+import { IntlProvider } from './IntlProvider'
 
 const App: React.FC = () => {
   return (
-    <div data-testid="app">
-      <h1>Hello world!</h1>
-    </div>
+    <IntlProvider>
+      <div data-testid="app">
+        <h1>
+          <FormattedMessage id="hello-world" />
+        </h1>
+      </div>
+    </IntlProvider>
   )
 }
 
