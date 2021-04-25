@@ -3,5 +3,7 @@ export const plPL = {
   'counter.decrement': 'Zmniejsz',
   'counter.reset': 'Resetuj',
   'counter.value': 'Wartość licznika: {value}',
-  'counter.change-count': 'Wartość zmieniła się {count} razy'
+  'counter.change-count': 'Wartość zmieniła się {count} razy',
+  '404.notfound': 'Nie znaleziono strony',
+  '404.visithome': 'Odwiedź stronę główną'
 }
