@@ -1,14 +1,17 @@
+import { Router } from '@reach/router'
 import React from 'react'
-import { FormattedMessage } from 'react-intl'
+import Error404 from '../../pages/404'
+import Counter from '../../pages/counter'
 import { IntlProvider } from './IntlProvider'
 
 const App: React.FC = () => {
   return (
     <IntlProvider>
       <div data-testid="app">
-        <h1>
-          <FormattedMessage id="hello-world" />
-        </h1>
+        <Router>
+          <Counter path="/" />
+          <Error404 default />
+        </Router>
       </div>
     </IntlProvider>
   )

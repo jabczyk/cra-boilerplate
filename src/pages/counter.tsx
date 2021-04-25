@@ -7,8 +7,9 @@ import {
   reset
 } from '../store/counter/counter.slice'
 import { FormattedMessage } from 'react-intl'
+import { RouteComponentProps } from '@reach/router'
 
-const Counter: React.FC = () => {
+const Counter: React.FC<RouteComponentProps> = () => {
   const dispatch = useDispatch()
   const counter = useSelector(getCounter)
 
