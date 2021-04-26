@@ -5,5 +5,7 @@ export const plPL = {
   'counter.value': 'Wartość licznika: {value}',
   'counter.change-count': 'Wartość zmieniła się {count} razy',
   '404.notfound': 'Nie znaleziono strony',
-  '404.visithome': 'Odwiedź stronę główną'
+  '404.visithome': 'Odwiedź stronę główną',
+  'error.unexpected': 'Wystąpił nieoczekiwany błąd',
+  'error.reload': 'Proszę zrestartować strońę'
 }
